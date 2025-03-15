@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { ClerkProvider } from "@clerk/nextjs"
+import { Navbar } from "@/components/custom/Navbar"
 
 export const metadata: Metadata = {
   title: "BookIt",
@@ -14,6 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
+      <Navbar />
       <html lang="en">
         <body
           // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -23,4 +25,5 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
+  )
 }
